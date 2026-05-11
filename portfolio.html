@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhamed Abdallah — Sales Operations & Data Analytics</title>
+<meta name="description" content="Freelance Sales Operations Specialist, CRM Expert & Data Analytics Professional. 7+ years driving revenue growth through data-driven insights.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #16161f;
+    --surface: #1c1c27;
+    --surface2: #22222f;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --accent: #5b6af5;
+    --accent2: #7c8aff;
+    --accent3: #a5adff;
+    --gold: #e8b84b;
+    --gold2: #f5cc6e;
+    --text: #f0f0f8;
+    --text2: #9898b8;
+    --text3: #5c5c7a;
+    --green: #3ecf8e;
+    --red: #f56565;
+    --teal: #2dd4bf;
+    --r: 12px;
+    --r2: 20px;
+    --r3: 8px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    backdrop-filter: blur(20px);
+    background: rgba(10,10,15,0.85);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo span { color: var(--accent2); }
+  .nav-badge {
+    font-size: 10px; font-weight: 500;
+    background: rgba(91,106,245,0.15);
+    color: var(--accent3);
+    border: 1px solid rgba(91,106,245,0.3);
+    padding: 3px 8px; border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.85rem; font-weight: 400;
+    color: var(--text2); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    background: var(--accent);
+    color: #fff; border: none;
+    padding: 8px 20px; border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem; font-weight: 500;
+    cursor: pointer; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-cta:hover { background: var(--accent2); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    padding: 120px 2rem 80px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(91,106,245,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(91,106,245,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent);
+  }
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(91,106,245,0.12) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -60%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: 860px; text-align: center;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.8rem; font-weight: 500;
+    color: var(--accent3);
+    border: 1px solid rgba(91,106,245,0.25);
+    background: rgba(91,106,245,0.08);
+    padding: 6px 16px; border-radius: 20px;
+    margin-bottom: 2rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  .hero-h1 {
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    font-weight: 800; line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .hero-h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--accent2), var(--teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    font-size: 1.15rem; color: var(--text2);
+    max-width: 560px; margin: 0 auto 2.5rem;
+    font-weight: 300; line-height: 1.7;
+  }
+  .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent);
+    color: #fff; text-decoration: none;
+    padding: 14px 28px; border-radius: 10px;
+    font-weight: 500; font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(91,106,245,0.3); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--text); text-decoration: none;
+    padding: 14px 28px; border-radius: 10px;
+    border: 1px solid var(--border2);
+    font-weight: 500; font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-2px); }
+  .hero-stats {
+    display: flex; gap: 0; justify-content: center;
+    margin-top: 4rem;
+    border: 1px solid var(--border);
+    border-radius: var(--r2);
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    max-width: 600px;
+    margin-left: auto; margin-right: auto;
+  }
+  .hero-stat {
+    flex: 1; padding: 1.5rem;
+    border-right: 1px solid var(--border);
+    text-align: center;
+  }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem; font-weight: 800;
+    color: var(--accent2);
+    display: block;
+  }
+  .hero-stat-label { font-size: 0.75rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.75rem; font-weight: 500;
+    color: var(--accent3); letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  .section-sub {
+    font-size: 1rem; color: var(--text2);
+    max-width: 520px; line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--bg2); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr;
+    gap: 4rem; align-items: center;
+  }
+  .about-avatar-wrap {
+    position: relative;
+  }
+  .about-avatar {
+    width: 100%; aspect-ratio: 1;
+    border-radius: var(--r2);
+    background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+    border: 1px solid var(--border2);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; position: relative;
+  }
+  .about-initials {
+    font-family: 'Syne', sans-serif;
+    font-size: 5rem; font-weight: 800;
+    background: linear-gradient(135deg, var(--accent2), var(--teal));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative; z-index: 1;
+  }
+  .about-avatar::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(91,106,245,0.15), transparent 60%);
+  }
+  .about-badge {
+    position: absolute; bottom: -16px; right: -16px;
+    background: var(--gold);
+    color: #000; font-weight: 700;
+    font-size: 0.85rem; padding: 12px 20px;
+    border-radius: var(--r);
+    white-space: nowrap;
+  }
+  .about-text h3 {
+    font-size: 1.6rem; font-weight: 700;
+    margin-bottom: 1rem; letter-spacing: -0.01em;
+  }
+  .about-text p { color: var(--text2); margin-bottom: 1rem; font-size: 0.95rem; }
+  .about-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
+  .chip {
+    font-size: 0.8rem; padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border2);
+    background: rgba(255,255,255,0.03);
+    color: var(--text2);
+    white-space: nowrap;
+  }
+
+  /* ── SKILLS ── */
+  #skills { background: var(--bg); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 1.5rem;
+    transition: all 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .skill-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--teal));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .skill-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+  .skill-card:hover::before { opacity: 1; }
+  .skill-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: rgba(91,106,245,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; margin-bottom: 1rem;
+  }
+  .skill-name { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .skill-bar-wrap { background: rgba(255,255,255,0.06); border-radius: 4px; height: 4px; overflow: hidden; }
+  .skill-bar { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), var(--teal)); }
+
+  /* ── SERVICES ── */
+  #services { background: var(--bg2); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .service-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r2);
+    padding: 2rem;
+    transition: all 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .service-card:hover {
+    border-color: rgba(91,106,245,0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  }
+  .service-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem; font-weight: 700;
+    color: var(--text3); letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+  .service-icon {
+    font-size: 2.5rem; margin-bottom: 1rem;
+    display: block;
+  }
+  .service-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .service-desc { font-size: 0.9rem; color: var(--text2); line-height: 1.7; margin-bottom: 1.5rem; }
+  .service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .service-tag {
+    font-size: 0.75rem; padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(91,106,245,0.1);
+    color: var(--accent3);
+    border: 1px solid rgba(91,106,245,0.2);
+  }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--bg); }
+  .projects-list { display: flex; flex-direction: column; gap: 3rem; }
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r2);
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  .project-card:hover {
+    border-color: var(--border2);
+    box-shadow: 0 24px 48px rgba(0,0,0,0.4);
+  }
+  .project-img-wrap {
+    width: 100%; aspect-ratio: 16/8;
+    overflow: hidden; position: relative;
+    background: var(--bg3);
+  }
+  .project-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top;
+    transition: transform 0.5s;
+    display: block;
+  }
+  .project-card:hover .project-img-wrap img { transform: scale(1.03) translateY(-2%); }
+  .project-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(10,10,15,0.7) 100%);
+  }
+  .project-body { padding: 2rem; }
+  .project-meta {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 1rem; flex-wrap: wrap;
+  }
+  .project-type {
+    font-size: 0.75rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--accent3);
+    background: rgba(91,106,245,0.1);
+    border: 1px solid rgba(91,106,245,0.2);
+    padding: 4px 12px; border-radius: 20px;
+  }
+  .project-year { font-size: 0.8rem; color: var(--text3); }
+  .project-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+  .project-problem {
+    font-size: 0.85rem; color: var(--text3);
+    font-style: italic; margin-bottom: 1rem;
+    padding-left: 1rem; border-left: 2px solid var(--accent);
+  }
+  .project-desc { font-size: 0.95rem; color: var(--text2); line-height: 1.7; margin-bottom: 1.5rem; }
+  .project-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem; margin-bottom: 1.5rem;
+  }
+  .result-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 1rem; text-align: center;
+  }
+  .result-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem; font-weight: 800;
+    color: var(--green); display: block;
+  }
+  .result-label { font-size: 0.75rem; color: var(--text3); line-height: 1.3; }
+  .project-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tool-tag {
+    font-size: 0.78rem; padding: 4px 12px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.05);
+    color: var(--text2);
+    border: 1px solid var(--border);
+  }
+  .project-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .project-two-col .project-img-wrap { aspect-ratio: auto; height: 100%; }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--bg2); }
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 0; top: 6px; bottom: 0;
+    width: 1px; background: var(--border2);
+  }
+  .timeline-item {
+    position: relative; margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; margin-bottom: 0; }
+  .timeline-dot {
+    position: absolute; left: -2.35rem; top: 6px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg2);
+    box-shadow: 0 0 0 3px rgba(91,106,245,0.2);
+  }
+  .timeline-date { font-size: 0.8rem; color: var(--text3); margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+  .timeline-role { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .timeline-company { font-size: 0.9rem; color: var(--accent3); margin-bottom: 0.75rem; }
+  .timeline-desc { font-size: 0.9rem; color: var(--text2); line-height: 1.7; }
+  .timeline-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.75rem; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--bg); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start;
+  }
+  .contact-text h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.02em; }
+  .contact-text p { color: var(--text2); line-height: 1.7; margin-bottom: 2rem; }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 1rem 1.25rem;
+    text-decoration: none; color: var(--text);
+    transition: all 0.2s;
+  }
+  .contact-link:hover { border-color: var(--accent2); transform: translateX(4px); }
+  .contact-link-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: rgba(91,106,245,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; flex-shrink: 0;
+  }
+  .contact-link-text { flex: 1; }
+  .contact-link-label { font-size: 0.75rem; color: var(--text3); display: block; }
+  .contact-link-value { font-size: 0.9rem; font-weight: 500; }
+  .contact-link-arrow { color: var(--text3); font-size: 1rem; }
+  .contact-form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r2);
+    padding: 2rem;
+  }
+  .form-group { margin-bottom: 1.25rem; }
+  .form-label { display: block; font-size: 0.8rem; color: var(--text3); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .form-input {
+    width: 100%; background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border2);
+    border-radius: var(--r3);
+    padding: 12px 16px;
+    color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-input:focus { border-color: var(--accent2); }
+  textarea.form-input { min-height: 120px; resize: vertical; }
+  .form-submit {
+    width: 100%;
+    background: var(--accent);
+    color: #fff; border: none;
+    padding: 14px; border-radius: var(--r3);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem; font-weight: 500;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .form-submit:hover { background: var(--accent2); transform: translateY(-1px); }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+    text-align: center;
+    color: var(--text3); font-size: 0.85rem;
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.1s; }
+  .delay-2 { transition-delay: 0.2s; }
+  .delay-3 { transition-delay: 0.3s; }
+  .delay-4 { transition-delay: 0.4s; }
+  .delay-5 { transition-delay: 0.5s; }
+
+  /* ── HAMBURGER ── */
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: all 0.3s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .project-two-col { grid-template-columns: 1fr; }
+    .hero-stats { flex-direction: column; border: none; gap: 0.5rem; background: transparent; }
+    .hero-stat { border: 1px solid var(--border); border-radius: var(--r3); }
+    .about-badge { right: 0; }
+  }
+
+  /* ── MISC ── */
+  .text-accent { color: var(--accent2); }
+  .text-gold { color: var(--gold); }
+  .divider { height: 1px; background: var(--border); margin: 0; }
+  .available-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.8rem; color: var(--green);
+    background: rgba(62,207,142,0.08);
+    border: 1px solid rgba(62,207,142,0.25);
+    padding: 6px 14px; border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .available-badge::before {
+    content: ''; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--green);
+    animation: pulse 2s infinite;
+  }
+  .project-multi-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .project-multi-img img {
+    width: 100%; height: 280px;
+    object-fit: cover; object-position: top;
+    display: block;
+  }
+  .project-multi-img img:first-child { border-radius: var(--r2) 0 0 0; }
+  .project-multi-img img:last-child { border-radius: 0 var(--r2) 0 0; }
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    M<span>A</span>
+    <span class="nav-badge">Available for Hire</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:Mmmuhamed.311@gmail.com" class="nav-cta">Hire Me</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">Sales Operations &bull; Data Analytics &bull; CRM Expert</div>
+    <h1 class="hero-h1">
+      Turning Raw Data<br>Into <em>Revenue Growth</em>
+    </h1>
+    <p class="hero-sub">
+      I help businesses unlock the full potential of their sales data — building dashboards, optimizing CRM systems, and delivering insights that drive real commercial outcomes.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View My Work ↓</a>
+      <a href="mailto:Mmmuhamed.311@gmail.com" class="btn-secondary">Let's Talk →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">7+</span>
+        <span class="hero-stat-label">Years Experience</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">8,200+</span>
+        <span class="hero-stat-label">Leads Managed</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">6</span>
+        <span class="hero-stat-label">Teams Optimized</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">78%</span>
+        <span class="hero-stat-label">Avg Contact Rate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-avatar-wrap fade-up">
+        <div class="about-avatar">
+          <span class="about-initials">MA</span>
+        </div>
+        <div class="about-badge">🏆 7+ Years Pro</div>
+      </div>
+      <div class="about-text fade-up delay-2">
+        <div class="section-label">About Me</div>
+        <h3>Sales Strategist &amp; Data Analytics Professional</h3>
+        <div class="available-badge">Open to Freelance Projects</div>
+        <p>
+          I'm Muhamed Abdallah, a Cairo-based Sales Operations Specialist with over 7 years of hands-on experience spanning B2B sales, tele-sales, ERP systems, and data-driven team leadership.
+        </p>
+        <p>
+          My expertise sits at the intersection of sales performance and business intelligence — I design CRM systems, build interactive dashboards, and translate complex datasets into clear, actionable strategies that help businesses hit their targets faster.
+        </p>
+        <p>
+          Most recently at <strong>Welco Group (CMYK Digital Print)</strong>, I led the full data governance and CRM lifecycle for the sales department, delivering monthly KPI reports and campaign ROI analyses that directly influenced executive decision-making.
+        </p>
+        <div class="about-chips">
+          <span class="chip">📍 Cairo, Egypt</span>
+          <span class="chip">🌐 Remote-Friendly</span>
+          <span class="chip">🎓 Accounting – Cairo University</span>
+          <span class="chip">🗣 Arabic &amp; English</span>
+          <span class="chip">⚡ Fast Turnaround</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SKILLS ─── -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">Core Competencies</div>
+    <h2 class="section-title">Skills &amp; Tools</h2>
+    <p class="section-sub">A full-stack toolkit spanning data analysis, sales operations, CRM management, and business intelligence.</p>
+    <div class="skills-grid">
+      <div class="skill-card fade-up">
+        <div class="skill-icon">📊</div>
+        <div class="skill-name">Excel &amp; Data Analysis</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-1">
+        <div class="skill-icon">🗄️</div>
+        <div class="skill-name">CRM Administration</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-2">
+        <div class="skill-icon">📈</div>
+        <div class="skill-name">Dashboard Design</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-3">
+        <div class="skill-icon">🎯</div>
+        <div class="skill-name">KPI Reporting</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:93%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-4">
+        <div class="skill-icon">🤝</div>
+        <div class="skill-name">B2B Sales &amp; Pipeline</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-1">
+        <div class="skill-icon">🔍</div>
+        <div class="skill-name">Data Governance</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-2">
+        <div class="skill-icon">📱</div>
+        <div class="skill-name">Tele-Sales Operations</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-3">
+        <div class="skill-icon">🧩</div>
+        <div class="skill-name">ERP Systems (B2B)</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-4">
+        <div class="skill-icon">📣</div>
+        <div class="skill-name">Campaign ROI Analysis</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-5">
+        <div class="skill-icon">🧑‍🏫</div>
+        <div class="skill-name">Sales Team Leadership</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-1">
+        <div class="skill-icon">📦</div>
+        <div class="skill-name">Data Entry &amp; Validation</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:98%"></div></div>
+      </div>
+      <div class="skill-card fade-up delay-2">
+        <div class="skill-icon">🌐</div>
+        <div class="skill-name">Social Media Analytics</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">What I Offer</div>
+    <h2 class="section-title">Freelance Services</h2>
+    <p class="section-sub">End-to-end solutions from data infrastructure to executive-ready insights and revenue-focused operations strategy.</p>
+    <div class="services-grid">
+
+      <div class="service-card fade-up">
+        <div class="service-num">01</div>
+        <span class="service-icon">📊</span>
+        <h3 class="service-title">Data Analysis &amp; Reporting</h3>
+        <p class="service-desc">Transform messy spreadsheets into polished, actionable business reports. I identify patterns, spot revenue leaks, and present findings in clear executive-ready formats with supporting visualizations.</p>
+        <div class="service-tags">
+          <span class="service-tag">Excel</span>
+          <span class="service-tag">Pivot Tables</span>
+          <span class="service-tag">Statistical Analysis</span>
+          <span class="service-tag">Monthly Reports</span>
+        </div>
+      </div>
+
+      <div class="service-card fade-up delay-1">
+        <div class="service-num">02</div>
+        <span class="service-icon">🖥️</span>
+        <h3 class="service-title">Interactive Dashboard Creation</h3>
+        <p class="service-desc">Design and build performance dashboards that give sales teams and executives real-time visibility into KPIs, conversion rates, lead source performance, and team activity — all in one view.</p>
+        <div class="service-tags">
+          <span class="service-tag">Excel Dashboards</span>
+          <span class="service-tag">Data Viz</span>
+          <span class="service-tag">KPI Tracking</span>
+          <span class="service-tag">Interactive Charts</span>
+        </div>
+      </div>
+
+      <div class="service-card fade-up delay-2">
+        <div class="service-num">03</div>
+        <span class="service-icon">🗄️</span>
+        <h3 class="service-title">CRM Setup &amp; Management</h3>
+        <p class="service-desc">Architect, populate, and maintain CRM systems that actually work. From lead classification and pipeline structuring to contact governance and automated reporting workflows — I ensure your data stays clean and useful.</p>
+        <div class="service-tags">
+          <span class="service-tag">CRM Architecture</span>
+          <span class="service-tag">Data Governance</span>
+          <span class="service-tag">Lead Scoring</span>
+          <span class="service-tag">Pipeline Design</span>
+        </div>
+      </div>
+
+      <div class="service-card fade-up delay-3">
+        <div class="service-num">04</div>
+        <span class="service-icon">🎯</span>
+        <h3 class="service-title">Sales Operations Consulting</h3>
+        <p class="service-desc">Audit, diagnose, and optimize your entire sales operation. I map your process from first contact to close, identify friction points, and build frameworks that improve conversion rates and team efficiency.</p>
+        <div class="service-tags">
+          <span class="service-tag">Process Mapping</span>
+          <span class="service-tag">Funnel Optimization</span>
+          <span class="service-tag">Team KPIs</span>
+          <span class="service-tag">Sales Strategy</span>
+        </div>
+      </div>
+
+      <div class="service-card fade-up delay-4">
+        <div class="service-num">05</div>
+        <span class="service-icon">🤖</span>
+        <h3 class="service-title">Virtual Assistance</h3>
+        <p class="service-desc">Executive-level virtual support for sales and operations teams. Lead research, data entry, email management, scheduling, report compilation, and day-to-day operational tasks — handled with precision and speed.</p>
+        <div class="service-tags">
+          <span class="service-tag">Lead Research</span>
+          <span class="service-tag">Email Management</span>
+          <span class="service-tag">Scheduling</span>
+          <span class="service-tag">Operations Support</span>
+        </div>
+      </div>
+
+      <div class="service-card fade-up delay-5">
+        <div class="service-num">06</div>
+        <span class="service-icon">📋</span>
+        <h3 class="service-title">Data Entry &amp; Validation</h3>
+        <p class="service-desc">High-accuracy data entry, cleansing, and validation at scale. Whether migrating CRM records, processing exhibition leads, or standardizing legacy datasets — I deliver structured, error-free data you can trust.</p>
+        <div class="service-tags">
+          <span class="service-tag">Data Cleansing</span>
+          <span class="service-tag">Accuracy QA</span>
+          <span class="service-tag">Excel/Sheets</span>
+          <span class="service-tag">Lead Processing</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROJECTS ─── -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">Case Studies</div>
+    <h2 class="section-title">Portfolio Projects</h2>
+    <p class="section-sub">Real-world deliverables built for active sales teams — from individual rep trackers to company-wide performance intelligence systems.</p>
+
+    <div class="projects-list">
+
+      <!-- PROJECT 1 -->
+      <div class="project-card fade-up">
+        <div class="project-multi-img">
+          <img src="Screenshot_2026-05-11_115129.png" alt="Leads Performance Dashboard Overview" loading="lazy">
+          <img src="Screenshot_2026-05-11_115145.png" alt="Leads Performance Dashboard Detail" loading="lazy">
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-type">Excel Dashboard</span>
+            <span class="project-year">2025–2026</span>
+          </div>
+          <h3 class="project-title">Individual Sales Rep Performance Dashboard — Ahmed Magdy</h3>
+          <p class="project-problem">Challenge: Sales management had no structured visibility into individual rep performance across multiple lead sources and contact stages. Data lived in disconnected spreadsheets.</p>
+          <p class="project-desc">
+            Built a comprehensive single-rep performance tracker covering 2,294 total leads across a full commercial cycle. The dashboard synthesizes contact activity, pipeline stage progression, lead source attribution, and conversion analytics into one cohesive Excel interface. Features include a dynamic "Contacted vs Not Contacted by Status" breakdown, a ranked top-10 lead source chart (from trade exhibitions like Fi Africa 2024 and Cairo Fashion &amp; Tex 2025), pie chart segmentation, and KPI summary cards with calculated percentages — all updating dynamically from the underlying data model.
+          </p>
+          <div class="project-results">
+            <div class="result-item">
+              <span class="result-num">2,294</span>
+              <span class="result-label">Total Leads Tracked</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">78%</span>
+              <span class="result-label">Contact Rate Achieved</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">103</span>
+              <span class="result-label">Converted Customers</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">10</span>
+              <span class="result-label">Lead Sources Mapped</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">137</span>
+              <span class="result-label">Hot Prospects Identified</span>
+            </div>
+          </div>
+          <div class="project-tools">
+            <span class="tool-tag">Microsoft Excel</span>
+            <span class="tool-tag">Pivot Charts</span>
+            <span class="tool-tag">Conditional Formatting</span>
+            <span class="tool-tag">Dynamic Arrays</span>
+            <span class="tool-tag">Named Ranges</span>
+            <span class="tool-tag">Data Validation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card fade-up delay-1">
+        <div class="project-multi-img">
+          <img src="Screenshot_2026-05-06_144419.png" alt="Sales Dashboard Overview Tab" loading="lazy">
+          <img src="Screenshot_2026-05-06_144810.png" alt="Sales Dashboard Gap Analysis Tab" loading="lazy">
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-type">Interactive Web Dashboard</span>
+            <span class="project-year">May 2026</span>
+          </div>
+          <h3 class="project-title">Multi-Representative Sales Intelligence Platform — 6 Reps, 8,233 Clients</h3>
+          <p class="project-problem">Challenge: A sales organization with 6 representatives and 8,233+ client records had no unified view of performance gaps, contact aging, or comparative rep efficiency.</p>
+          <p class="project-desc">
+            Designed and delivered a full-featured multi-tab interactive web dashboard covering the entire sales team. The platform features four distinct analytical modules: (1) <strong>Sales Overview</strong> with filterable KPIs and client status distribution donut charts; (2) <strong>Contact Activity</strong> with per-rep contact rate breakdowns and stacked comparison charts; (3) <strong>Gap Analysis</strong> with automated priority flags identifying reps with critical outreach deficits — Sameh Ali flagged at 59% not-contacted (1,487 clients); and (4) <strong>Aging &amp; Timeline</strong> showing month-by-month contact history and time-since-last-contact distribution for each rep. The dashboard includes dynamic dropdowns for rep and status filtering, with all charts updating in real time.
+          </p>
+          <div class="project-results">
+            <div class="result-item">
+              <span class="result-num">8,233</span>
+              <span class="result-label">Client Records</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">6</span>
+              <span class="result-label">Reps Monitored</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">65%</span>
+              <span class="result-label">Overall Contact Rate</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">2,868</span>
+              <span class="result-label">Gap Clients Flagged</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">4</span>
+              <span class="result-label">Analytics Modules</span>
+            </div>
+          </div>
+          <div class="project-tools">
+            <span class="tool-tag">React.js</span>
+            <span class="tool-tag">Recharts</span>
+            <span class="tool-tag">Tailwind CSS</span>
+            <span class="tool-tag">JavaScript ES6+</span>
+            <span class="tool-tag">Data Aggregation</span>
+            <span class="tool-tag">Filtering Logic</span>
+            <span class="tool-tag">Aging Algorithms</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card fade-up delay-2">
+        <div class="project-img-wrap">
+          <img src="Screenshot_2026-05-05_131713.png" alt="Contact Activity Tab with Rep Comparison" loading="lazy">
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-type">Contact Activity Analysis</span>
+            <span class="project-year">2026</span>
+          </div>
+          <h3 class="project-title">Rep-Level Contact Rate Audit &amp; Activity Intelligence Report</h3>
+          <p class="project-problem">Challenge: Management could not identify which reps were falling behind on client outreach or quantify the revenue risk of uncontacted prospects.</p>
+          <p class="project-desc">
+            Delivered a granular contact activity analysis module identifying significant performance disparities across the team. Ahmed Magdy led the team with a 96% contact rate (2,052 clients contacted), while Sameh Ali and Hassan Nasser showed critical gaps at 41% and 49% respectively — representing over 2,500 high-risk uncontacted clients. The analysis included aging breakdowns (this week / this month / 1–3 months / 3–6 months / 6+ months), a 12-month contact trend line, and a per-rep priority matrix that automatically flagged "Medium Priority" escalation for accounts requiring immediate outreach. The resulting intelligence directly informed resource reallocation and outreach prioritization decisions.
+          </p>
+          <div class="project-results">
+            <div class="result-item">
+              <span class="result-num">96%</span>
+              <span class="result-label">Top Rep Contact Rate</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">2,500+</span>
+              <span class="result-label">At-Risk Clients Found</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">12 mo</span>
+              <span class="result-label">Historical Trend</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">6</span>
+              <span class="result-label">Aging Buckets</span>
+            </div>
+          </div>
+          <div class="project-tools">
+            <span class="tool-tag">Performance Analytics</span>
+            <span class="tool-tag">Aging Analysis</span>
+            <span class="tool-tag">Priority Flagging</span>
+            <span class="tool-tag">Trend Visualization</span>
+            <span class="tool-tag">Executive Reporting</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── EXPERIENCE ─── -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Career History</div>
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="section-sub">7+ years of progressive growth from sales agent to sales operations leader across multiple industries.</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Most Recent</div>
+        <div class="timeline-role">Sales Operations &amp; CRM Lead</div>
+        <div class="timeline-company">Welco Group — CMYK Digital Print</div>
+        <p class="timeline-desc">
+          Led the full data governance lifecycle for the sales department — designing data entry workflows, validating CRM accuracy, and owning reporting infrastructure. Delivered monthly and annual KPI reports highlighting sales trends and growth opportunities. Built campaign performance models measuring ROI across social media and outreach initiatives. Served as the primary liaison between Sales and Marketing to ensure campaign alignment and operational effectiveness.
+        </p>
+        <div class="timeline-tags">
+          <span class="chip">CRM Management</span>
+          <span class="chip">Data Governance</span>
+          <span class="chip">KPI Reporting</span>
+          <span class="chip">Campaign Analysis</span>
+          <span class="chip">Cross-Dept Liaison</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up delay-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Prior Role</div>
+        <div class="timeline-role">Sales Executive — ERP Systems</div>
+        <div class="timeline-company">TAS Online</div>
+        <p class="timeline-desc">
+          Managed the complete B2B sales cycle for enterprise software solutions — from initial prospecting and ERP demonstrations to negotiation and contract close. Built trusted relationships with C-level decision-makers and presented customized software solutions mapped to specific business needs.
+        </p>
+        <div class="timeline-tags">
+          <span class="chip">B2B Sales</span>
+          <span class="chip">ERP Demos</span>
+          <span class="chip">Full Sales Cycle</span>
+          <span class="chip">Relationship Management</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up delay-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Earlier</div>
+        <div class="timeline-role">Sales Team Leader</div>
+        <div class="timeline-company">El Mohkmen Arab</div>
+        <p class="timeline-desc">
+          Led and supervised a tele-sales team toward consistent monthly target achievement. Designed training programs covering objection handling, closing techniques, and consultative selling. Monitored team KPIs, managed marketing campaigns, and coordinated institutional events.
+        </p>
+        <div class="timeline-tags">
+          <span class="chip">Team Leadership</span>
+          <span class="chip">Tele-Sales</span>
+          <span class="chip">Sales Training</span>
+          <span class="chip">Event Management</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up delay-3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Earlier</div>
+        <div class="timeline-role">Senior Sales Agent — Indoor &amp; Outdoor</div>
+        <div class="timeline-company">Asmaa Group</div>
+        <p class="timeline-desc">
+          Generated new business through direct field and indoor sales. Built long-term client relationships, negotiated contracts, and consistently achieved and exceeded quarterly sales targets through upselling and strategic prospecting.
+        </p>
+        <div class="timeline-tags">
+          <span class="chip">Field Sales</span>
+          <span class="chip">Negotiation</span>
+          <span class="chip">Client Relations</span>
+          <span class="chip">Target Achievement</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up delay-4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Earlier</div>
+        <div class="timeline-role">Senior Sales Agent</div>
+        <div class="timeline-company">Concept</div>
+        <p class="timeline-desc">
+          Managed the full customer inquiry pipeline, converting prospects to confirmed sales through consultative selling. Consistently exceeded monthly and quarterly targets, with revenue uplift driven by strategic upselling and cross-selling.
+        </p>
+        <div class="timeline-tags">
+          <span class="chip">Prospect Conversion</span>
+          <span class="chip">Upselling</span>
+          <span class="chip">Target Overachievement</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up delay-5">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Entry Level</div>
+        <div class="timeline-role">Junior Sales Agent</div>
+        <div class="timeline-company">Harvest</div>
+        <p class="timeline-desc">
+          Gained foundational expertise in lead generation, customer acquisition, and client communication. Supported senior sales team members in deal management and follow-up processes.
+        </p>
+        <div class="timeline-tags">
+          <span class="chip">Lead Generation</span>
+          <span class="chip">Client Communication</span>
+          <span class="chip">Sales Fundamentals</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-text fade-up">
+        <div class="section-label">Get In Touch</div>
+        <h2>Ready to Work Together?</h2>
+        <p>
+          Whether you need a polished sales dashboard, CRM optimization, data analysis, or ongoing virtual operations support — I'm open to freelance projects of all sizes. Let's discuss your goals.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:Mmmuhamed.311@gmail.com" class="contact-link">
+            <div class="contact-link-icon">📧</div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">Mmmuhamed.311@gmail.com</span>
+            </div>
+            <span class="contact-link-arrow">→</span>
+          </a>
+          <a href="https://linkedin.com/in/muhamed-abdallah-840433330" target="_blank" class="contact-link">
+            <div class="contact-link-icon">💼</div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">muhamed-abdallah-840433330</span>
+            </div>
+            <span class="contact-link-arrow">→</span>
+          </a>
+          <a href="tel:+201092860017" class="contact-link">
+            <div class="contact-link-icon">📱</div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">Phone / WhatsApp</span>
+              <span class="contact-link-value">+20 109 286 0017</span>
+            </div>
+            <span class="contact-link-arrow">→</span>
+          </a>
+          <a href="Mohamed_Abdallah_CV.pdf" download class="contact-link">
+            <div class="contact-link-icon">📄</div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">Download</span>
+              <span class="contact-link-value">Full CV / Resume</span>
+            </div>
+            <span class="contact-link-arrow">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form fade-up delay-2">
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.2rem;">Send a Message</h3>
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" placeholder="e.g. Sarah Ahmed" id="cf-name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="you@company.com" id="cf-email">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service Needed</label>
+          <select class="form-input" id="cf-service" style="cursor:pointer;">
+            <option value="">Select a service…</option>
+            <option>Data Analysis &amp; Reporting</option>
+            <option>Dashboard Creation</option>
+            <option>CRM Setup &amp; Management</option>
+            <option>Sales Operations Consulting</option>
+            <option>Virtual Assistance</option>
+            <option>Data Entry &amp; Validation</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Project Details</label>
+          <textarea class="form-input" placeholder="Tell me about your project, goals, and timeline…" id="cf-message"></textarea>
+        </div>
+        <button class="form-submit" onclick="handleFormSubmit()">Send Message →</button>
+        <p id="form-feedback" style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--green); display: none; text-align: center;">
+          ✅ Message sent! I'll respond within 24 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>© 2026 Muhamed Abdallah — Sales Operations &amp; Data Analytics Specialist · Cairo, Egypt</p>
+  <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text3);">Available for freelance projects worldwide · Remote-friendly</p>
+</footer>
+
+<script>
+  /* ── Scroll animations ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  /* ── Nav scroll ── */
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.background = window.scrollY > 40
+      ? 'rgba(10,10,15,0.95)'
+      : 'rgba(10,10,15,0.85)';
+  });
+
+  /* ── Form ── */
+  function handleFormSubmit() {
+    const name = document.getElementById('cf-name').value.trim();
+    const email = document.getElementById('cf-email').value.trim();
+    const msg = document.getElementById('cf-message').value.trim();
+    if (!name || !email || !msg) {
+      alert('Please fill in your name, email, and message before sending.');
+      return;
+    }
+    const subject = encodeURIComponent('Freelance Inquiry from ' + name);
+    const body = encodeURIComponent(
+      'Name: ' + name + '\nEmail: ' + email +
+      '\nService: ' + document.getElementById('cf-service').value +
+      '\n\n' + msg
+    );
+    window.location.href = 'mailto:Mmmuhamed.311@gmail.com?subject=' + subject + '&body=' + body;
+    document.getElementById('form-feedback').style.display = 'block';
+  }
+
+  /* ── Smooth nav links ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  /* ── Hamburger ── */
+  document.querySelector('.hamburger').addEventListener('click', function() {
+    const links = document.querySelector('.nav-links');
+    const isOpen = links.style.display === 'flex';
+    links.style.display = isOpen ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '64px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = '#0a0a0f';
+    links.style.padding = '1rem 2rem 2rem';
+    links.style.borderBottom = '1px solid rgba(255,255,255,0.07)';
+    links.style.gap = '1rem';
+    if (isOpen) links.style.display = 'none';
+  });
+</script>
+</body>
+</html>
